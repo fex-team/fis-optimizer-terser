@@ -1,7 +1,7 @@
 var deasync = require("deasync");
 var terser = require("terser");
 
-function syncPromis(fn) {
+function syncPromise(fn) {
   return function () {
     var done = false;
     var args = Array.prototype.slice.apply(arguments);
@@ -32,7 +32,7 @@ function syncPromis(fn) {
     return res;
   };
 }
-var syncMinify = syncPromis(terser.minify);
+var syncMinify = syncPromise(terser.minify);
 
 module.exports = function (content, file, options) {
   var result = syncMinify(content, options);

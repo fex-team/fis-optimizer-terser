@@ -34,7 +34,11 @@ function syncPromise(fn) {
 }
 var syncMinify = syncPromise(terser.minify);
 
-module.exports = function (content, file, options) {
+module.exports = function (content, file, defaultOptions) {
+  var options = Object.assign({}, defaultOptions);
+
+  delete options.filename;
+
   var result = syncMinify(content, options);
 
   // todo 支持 sourceMap

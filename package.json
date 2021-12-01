@@ -1,6 +1,6 @@
 {
   "name": "fis-optimizer-terser",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/fex-team/fis-optimizer-terser#readme",
   "dependencies": {
-    "deasync": "0.1.23",
-    "terser": "5.9.0"
+    "deasync": "0.1.24",
+    "terser": "5.10.0"
   }
 }
